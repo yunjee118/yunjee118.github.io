@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>멋사1차과제</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+    <!--폰트바꾸기-->
+    <style>
+        @font-face {
+            font-family: 'yg-jalnan';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'yg-jalnan';
+        }
+
+        pre {
+            font-family: 'jg-jalnan', monospace;
+        }
+
+        h1 {
+            margin-top: 20px;
+            line-height: 50px;
+        }
+
+        .login-page {
+            position: absolute;
+            right: 2%;
+        }
+
+        .jump-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .ball-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .toe-touching-container {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+
+</head>
+
+
+<body style="background-color : #fffcf0">
+    <div class="contatiner fixed-top">
+
+        <!--상단바 사이즈 조절, 위치 조정-->
+
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #dedcee">
+            <a class="navbar-brand" href="#"></a>
+            <ion-icon name="walk" size=large></ion-icon>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            서울권 대학소개
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#y-university">연세대</a>
+                            <a class="dropdown-item" href="#k-university">고려대</a>
+                            <a class="dropdown-item" href="#s-university">서울시립대</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            주요 실기소개
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#jump">제자리멀리뛰기</a>
+                            <a class="dropdown-item" href="#medicineball">메디신볼던지기</a>
+                            <a class="dropdown-item" href="#toe-touching">체전굴</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            합격수기
+                            <!--bs추가하기-->
+                        </a>
+                    </li>
+                    <div class="login-page">
+                        <form class="form-inline">
+                            <div class="form-group mb-2">
+                                <label for="staticEmail2" class="sr-only">Email</label>
+                                <input type="email" class="form-control" id="staticEmail2"
+                                    placeholder="email@example.com">
+                            </div>
+                            <div class="form-group mx-sm-3 mb-2">
+                                <label for="inputPassword2" class="sr-only">Password</label>
+                                <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+                            </div>
+                            <button type="submit" class="btn btn-primary mb-2">Login</button>
+                        </form>
+                    </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <img src="img/run.jpg" style="width : 100%; height : 600px;">
+    </div>
+
+    <br>
+    <h1 class="mt-10 text-center display-5" style="color : #6a60a9;">
+        <ion-icon name="school"></ion-icon> [ 서울권 대학소개 ]
+    </h1>
+
+    <br>
+    <br>
+    <!-- 연세대 -->
+    <div class="container">
+        <h1 class="mt-10 text-center display-5">"연세대학교 체육교육학과"</h1>
+        <div id="y-university" style="padding-top: 70px">
+            <div class="row">
+                <div class="col-7">
+                    <img class="img-fluid" src="img/y-university1.jpg">
+                </div>
+                <div class=" col-5">
+                    <p>
+                        <ion-icon name="pin"></ion-icon> 서울특별시 서대문구 연세로 50
+                        <br />
+                        <br />
+                        2020년도 정시모집 인원: 23명(나군)
+                        <br />
+                        <br />
+                        반영비율: 대학수학능력시험(85%), 운동실기(10%), 면접(5%)
+                        <br />
+                        <br />
+                        수학능력시험 반영방법: 국어(200), 수학(200), 영어(100), 탐구(100)
+                        <br />
+                        <br />
+                        운동실기 종목: 제자리멀리뛰기, 25m 왕복달리기, 메디신볼던지기
+                        <br />
+                        <br />
+                        <a href="http://ped.yonsei.ac.kr/modules/doc/index.php?doc=intro"
+                            style="text-decoration: none;color:#fbd14b;">'연세대학교 체육교육학과 홈페이지'</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <br>
+        <br>
+        <!--고려대-->
+        <h1 class="mt-10 text-center display-5">"고려대학교 체육교육과"</h1>
+
+        <div id="k-university" style="padding-top: 70px">
+            <div class="row">
+                <div class="col-7">
+                    <img class="img-fluid" src="img/k-university">
+                </div>
+                <div class=" col-5">
+                    <p>
+                        <ion-icon name="pin"></ion-icon> 서울특별시 성북구 안암로 145 고려대학교 인문사회캠퍼스
+                        <br />
+                        <br />
+                        2020년도 정시모집 인원: 42명(나군)
+                        <br />
+                        <br />
+                        반영비율: 대학수학능력시험(85%), 운동실기(10%), 면접(5%)
+                        <br />
+                        <br />
+                        수학능력시험 반영방법: 국어(200), 수학(200), 영어(100), 탐구(100)
+                        <br />
+                        <br />
+                        운동실기 종목: 지그재그달리기, 농구(레이업), 높이뛰기, 소프트볼던지기
+                        <br />
+                        <br />
+                        <a href="https://phyedu.korea.ac.kr/phyedu/index.do"
+                            style="text-decoration: none;color:#fbd14b;">'고려대학교 체육교육과 홈페이지'</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <!--서울시립대-->
+        <h1 class="mt-10 text-center display-5">"서울시립대학교 스포츠과학과"</h1>
+        <div id="s-university" style="padding-top: 70px">
+            <div class="row">
+                <div class="col-7">
+                    <img class="img-fluid" src="img/s-university.jpg">
+                </div>
+                <div class=" col-5">
+                    <p>
+                        <ion-icon name="pin"></ion-icon> 서울특별시 동대문구 서울시립대로 163 (전농동)
+                        <br />
+                        <br />
+                        2020년도 정시모집 인원: 30명(가군)
+                        <br />
+                        <br />
+                        반영비율: 1단계 대학수학능력시험(100%) 정원의 4배수 선발
+                        <br />
+                        2단계: 대학수학능력시험(50%), 내신(20%), 실기(30%)
+                        <br />
+                        <br />
+                        수학능력시험 반영비율: 국어(40%), 수학(30%), 영어(30%), 한국사(감점)
+                        <br />
+                        <br />
+                        운동실기 종목: 100m달리기, 제자리멀리뛰기, 체전굴
+                        <br />
+                        <br />
+                        <a href="http://sports.uos.ac.kr/" style="text-decoration: none;color:#fbd14b;">'서울시립대학교 스포츠과학과
+                            홈페이지'</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <br>
+        <br>
+        <h1 class="mt-10 text-center display-5" style="color : #6a60a9;">
+            <ion-icon name="bicycle"></ion-icon> [ 주요실기소개 ]
+        </h1>
+
+        <!--제자리멀리뛰기-->
+        <div class="container">
+            <div id="jump" style="padding-top: 70px">
+                <div class="row">
+                    <div class="col-7">
+                        <img class="img-fluid" src="img/jump.jpg">
+                    </div>
+                    <div class=" col-5">
+                        <p>
+                            <h1>제자리멀리뛰기</h1>
+                            <br />
+                            <br />
+
+                            <a href="https://www.youtube.com/watch?v=IQowA_6AGOI"
+                                style="text-decoration: none;color:#fbd14b;">
+                                <div class="jump-container">
+                                    <ion-icon name="skip-backward" style="color : black; height : 30px;"></ion-icon>
+                                    <span class="jump_text">'제자리멀리뛰기 참고영상'</span>
+                                </div>
+                            </a>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!--메디신볼던지기-->
+            <div id="medicineball" style="padding-top: 70px">
+                <div class="row">
+                    <div class="col-7">
+                        <img class="img-fluid" src="img/medicineball.jpg">
+                    </div>
+                    <div class=" col-5">
+                        <p>
+                            <h1>메디신볼던지기</h1>
+                            <br />
+                            <br />
+                            <a href="https://www.youtube.com/watch?v=Y3wMRlHqwI8"
+                                style="text-decoration: none;color:#fbd14b;">
+                                <div class="ball-container">
+                                    <ion-icon name="skip-backward" style="color : black; height : 30px;"></ion-icon>
+                                    <span class="ball_text">'메디신볼던지기 참고영상'</span>
+                                </div>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!--체전굴-->
+            <div id="toe-touching" style="padding-top: 70px">
+                <div class="row">
+                    <div class="col-7">
+                        <img class="img-fluid" src="img/toe-touching.jpg">
+                    </div>
+                    <div class=" col-5">
+                        <p>
+                            <h1>체전굴</h1>
+                            <br />
+                            <br />
+
+                    
+                            <a href="https://www.youtube.com/watch?v=4YSbhHVczNY"
+                                style="text-decoration: none;color:#fbd14b;">
+                                <div class="toe-touching-container">
+                                    <ion-icon name="skip-backward" style="color : black; height : 30px;"></ion-icon>
+                                    <span class="toe-touching_text">'체전굴 참고영상'</span>
+                                </div>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+</body>
+
+</html>
